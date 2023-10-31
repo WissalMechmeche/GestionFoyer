@@ -1,18 +1,20 @@
 package tn.esprit.gestionfoyer.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.gestionfoyer.entities.Reservation;
 import tn.esprit.gestionfoyer.entities.Universite;
 import tn.esprit.gestionfoyer.services.IUniversiteService;
 
 import java.util.List;
-
+@Tag(name = "Gestion Universite")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/universite")
 public class UniversiteRestController {
-
+    @Autowired
     IUniversiteService universiteService ;
 
     @GetMapping("/retrieve-all-universites")

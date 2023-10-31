@@ -1,16 +1,19 @@
 package tn.esprit.gestionfoyer.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.gestionfoyer.entities.Bloc;
 import tn.esprit.gestionfoyer.services.IBlocService;
 
 import java.util.List;
-
+@Tag(name = "Gestion Bloc")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/bloc")
 public class BlocRestController {
+    @Autowired
     IBlocService blocService ;
 
 

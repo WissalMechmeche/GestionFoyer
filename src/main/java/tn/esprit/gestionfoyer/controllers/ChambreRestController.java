@@ -1,19 +1,25 @@
 package tn.esprit.gestionfoyer.controllers;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.gestionfoyer.entities.Chambre;
 import tn.esprit.gestionfoyer.services.IChambreService;
 
 import java.util.List;
+@Tag(name = "Gestion Chambre")
 @RestController
 @AllArgsConstructor
 @RequestMapping("/chambre")
 public class ChambreRestController {
 
+    @Autowired
     IChambreService chambreService;
 
     // http://localhost:8089/tpfoyer/chambre/retrieve-all-chambres
+    @Operation(description = "récupérer toutes les chambres de la base de données")
     @GetMapping("/retrieve-all-chambres")
     public List<Chambre> getChambres() {
         List<Chambre> listChambres = chambreService.retrieveAllChambres();
