@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.gestionfoyer.entities.Bloc;
 import tn.esprit.gestionfoyer.entities.Foyer;
+import tn.esprit.gestionfoyer.entities.Universite;
 import tn.esprit.gestionfoyer.services.IFoyerService;
 
 import java.util.List;
@@ -49,4 +50,18 @@ public class FoyerRestController {
         Foyer foyer = foyerService.modifyFoyer(c);
         return foyer;
     }
+
+    @PutMapping("/affecter-Foyer-A-Universite")
+    public Universite affecterFoyerAUniversite(@RequestParam long idFoyer , @RequestParam String nomUniversite) {
+        return foyerService.affecterFoyerAUniversite(idFoyer,nomUniversite);
+    }
+
+    @PutMapping("/affecter-Foyer-A-Universite/{idFoyer}/{nomUniversite}")
+    public void affecterFoyerAUni(@PathVariable("idFoyer") long idFoyer , @PathVariable("nomUniversite")
+    String nomUniversite) {
+        foyerService.affecterFoyerAUniversite(idFoyer, nomUniversite);
+    }
+
+
+
 }

@@ -11,6 +11,7 @@ import java.util.List;
 
 @Repository
 public interface FoyerRepository extends JpaRepository<Foyer,Long> {
+    Foyer findByNomFoyer(String nom );
 
     /*List<Foyer> findFoyerByCapaciteFoyer(long capaciteFoyer);
 

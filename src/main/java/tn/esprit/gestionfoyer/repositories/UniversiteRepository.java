@@ -13,9 +13,9 @@ import java.util.List;
 @Repository
 public interface UniversiteRepository extends JpaRepository<Universite,Long> {
 
-    /*List<Universite> findUniversiteByAdresse(String adresse);
+    //List<Universite> findUniversiteByAdresse(String adresse);
 
-    Universite findUniversiteByNomUniversite(String nom);
-    @Query("SELECT u FROM Universite u WHERE u.adresse =:adresse")
+    Universite findByNomUniversite(String nom);
+    /*@Query("SELECT u FROM Universite u WHERE u.adresse =:adresse")
     List<Chambre> retrieveUniversitesByAdresse(@Param("adresse") String adresse);*/
 }
