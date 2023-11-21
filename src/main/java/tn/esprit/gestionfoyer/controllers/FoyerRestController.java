@@ -62,6 +62,13 @@ public class FoyerRestController {
         foyerService.affecterFoyerAUniversite(idFoyer, nomUniversite);
     }
 
+    @PutMapping ("/desaffecter-Foyer-A-Universite")
+    public void desaffecterFoyerDUniversite(@RequestParam long idFoyer, @RequestParam long idUniv) {
+        foyerService.desaffecterFoyerAUniversite(idFoyer,idUniv);
+    }
+
+
+
 
 
 }

@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import tn.esprit.gestionfoyer.entities.Bloc;
 import tn.esprit.gestionfoyer.entities.Chambre;
 import tn.esprit.gestionfoyer.services.IChambreService;
 
@@ -50,5 +51,12 @@ public class ChambreRestController {
         Chambre chambre = chambreService.modifyChambre(c);
         return chambre;
     }
+
+    @PutMapping("/affecter-Chambre-A-Bloc/{numChambre}/{idBloc}")
+    public void affecterChambreABloc(@PathVariable("numChambre") List<Long> numChambre , @PathVariable("idBloc")
+    long idBloc) {
+        chambreService.affecterChambresABloc(numChambre, idBloc);
+    }
+
 
 }
