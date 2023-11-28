@@ -10,7 +10,8 @@ import java.util.List;
 
 @Repository
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
-    /*Etudiant findEtudiantByCin(long cin);
+    Etudiant findEtudiantByCin(long cin);
+    /*
 
     List<Etudiant> findEtudiantByEcole(String ecole);
 

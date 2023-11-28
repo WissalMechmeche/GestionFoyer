@@ -1,0 +1,18 @@
+2023-11-22T10:07:51.148+01:00  INFO 21088 --- [main] t.e.g.GestionFoyerApplication            : Starting GestionFoyerApplication using Java 17.0.8 with PID 21088 (C:\Users\melek\IdeaProjects\GestionFoyer\target\classes started by MSI in C:\Users\melek\IdeaProjects\GestionFoyer)
+2023-11-22T10:07:51.150+01:00  INFO 21088 --- [main] t.e.g.GestionFoyerApplication            : No active profile set, falling back to 1 default profile: "default"
+2023-11-22T10:07:51.993+01:00  INFO 21088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-22T10:07:51.994+01:00  INFO 21088 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.13]
+2023-11-22T10:07:52.044+01:00  INFO 21088 --- [main] o.a.c.c.C.[.[localhost].[/tpfoyer]       : Initializing Spring embedded WebApplicationContext
+2023-11-22T10:07:52.148+01:00  INFO 21088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-22T10:07:52.173+01:00  INFO 21088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.9.Final
+2023-11-22T10:07:52.174+01:00  INFO 21088 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-11-22T10:07:52.243+01:00  INFO 21088 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-22T10:07:52.410+01:00  WARN 21088 --- [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-11-22T10:07:52.539+01:00  INFO 21088 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-11-22T10:07:53.029+01:00  INFO 21088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-11-22T10:07:53.690+01:00  WARN 21088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-11-22T10:07:54.206+01:00  INFO 21088 --- [main] t.e.g.GestionFoyerApplication            : Started GestionFoyerApplication in 3.289 seconds (process running for 3.59)
+2023-11-22T10:08:00.846+01:00  INFO 21088 --- [http-nio-8082-exec-1] o.a.c.c.C.[.[localhost].[/tpfoyer]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-22T10:08:00.915+01:00  INFO 21088 --- [http-nio-8082-exec-1] t.e.gestionfoyer.config.LoggingAspect    : In method addChambre : 
+2023-11-22T10:08:00.916+01:00  INFO 21088 --- [http-nio-8082-exec-1] t.e.g.services.ChambreServiceImpl        : Add Chambre
+2023-11-22T10:08:00.973+01:00  INFO 21088 --- [http-nio-8082-exec-1] t.e.g.config.PerformanceAspect           : Method execution time: 57 milliseconds.

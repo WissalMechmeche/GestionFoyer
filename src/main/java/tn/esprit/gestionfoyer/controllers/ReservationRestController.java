@@ -47,4 +47,10 @@ public class ReservationRestController {
         Reservation reservation = reservationService.modifyReservation(c);
         return reservation;
     }
+
+    @PostMapping("/ajouter-reservation")
+    public Reservation ajouterReservation(@RequestParam long idChambre , @RequestParam long cinEtudiant) {
+        Reservation reservation = reservationService.ajouterReservation(idChambre,cinEtudiant);
+        return reservation;
+    }
 }

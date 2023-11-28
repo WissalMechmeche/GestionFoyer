@@ -19,6 +19,8 @@ public class Chambre implements Serializable {
 
     private long numeroChambre ;
 
+
+    @Enumerated(EnumType.STRING)
     private TypeChambre typeC ;
 
     @ManyToOne
