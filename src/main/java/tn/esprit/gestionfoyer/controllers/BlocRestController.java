@@ -48,4 +48,11 @@ public class BlocRestController {
         Bloc bloc = blocService.modifyBloc(c);
         return bloc;
     }
+
+
+    @PostMapping ("/affecter-chambre-bloc")
+    public Bloc affecterChambreABloc(@RequestBody List<Long> numChambre, @RequestParam("idBloc") long idBloc) {
+        Bloc bloc = blocService.affecterChambreABloc(numChambre,idBloc);
+        return bloc;
+    }
 }

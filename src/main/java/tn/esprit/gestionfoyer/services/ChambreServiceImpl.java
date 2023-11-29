@@ -48,19 +48,6 @@ public class ChambreServiceImpl implements IChambreService{
         return chambreRepository.save(chambre);
     }
 
-    public Bloc affecterChambresABloc(List<Long> numChambre, long idBloc) {
-        Bloc bloc = blocRepository.findById(idBloc).orElse(null);
 
-        if (bloc != null) {
-            List<Chambre> chambres = chambreRepository.findAllById(numChambre);
-
-            if (!chambres.isEmpty()) {
-                bloc.setChambres((Set<Chambre>) chambres);
-                return blocRepository.save(bloc);
-            }
-        }
-
-        return null;
-    }
 
 }

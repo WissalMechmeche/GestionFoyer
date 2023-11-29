@@ -13,7 +13,6 @@ public interface IChambreService {
     public void removeChambre(Long chambreId);
     public Chambre modifyChambre(Chambre chambre);
 
-    public Bloc affecterChambresABloc(List<Long> numChambre, long idBloc) ;
 
 
 }

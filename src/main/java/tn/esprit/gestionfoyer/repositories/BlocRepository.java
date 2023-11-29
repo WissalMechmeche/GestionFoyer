@@ -12,7 +12,8 @@ import java.util.List;
 @Repository
 public interface BlocRepository extends JpaRepository<Bloc,Long> {
 
-    /*Bloc findBlocsByNomBloc(String nomBloc);
+    Bloc findBlocsByNomBloc(String nomBloc);
+    /*
     List<Bloc> findBlocsByCapaciteBloc(long capaciteBloc);
 
     @Query("SELECT b FROM Bloc b WHERE b.capaciteBloc =:capaciteBloc")

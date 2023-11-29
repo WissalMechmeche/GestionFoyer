@@ -65,4 +65,15 @@ public class FoyerServiceImpl implements IFoyerService {
         }
         return null;
     }
+
+
+    @Override
+    public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer , long idUniversite)
+    {
+        Foyer foyer1 = foyerRepository.save(foyer);
+        Universite universite = universiteRepository.findById(idUniversite).get();
+        universite.setFoyer(foyer1);
+        universiteRepository.save(universite);
+        return foyer1;
+    }
 }

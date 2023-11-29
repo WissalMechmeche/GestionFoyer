@@ -16,4 +16,6 @@ public interface IFoyerService {
     public Universite affecterFoyerAUniversite (long idFoyer, String nomUniversite) ;
 
     public Universite desaffecterFoyerAUniversite (long idFoyer, long idUniversite) ;
+
+    public Foyer ajouterFoyerEtAffecterAUniversite(Foyer foyer , long idUniversite);
 }

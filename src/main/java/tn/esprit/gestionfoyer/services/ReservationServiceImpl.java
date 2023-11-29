@@ -50,35 +50,6 @@ public class ReservationServiceImpl implements IReservationService{
     EtudiantRepository etudiantRepository;
     @Override
     public Reservation ajouterReservation(long idChambre, long  cinEtudiant) {
-        Reservation r = new Reservation();
-        Chambre c = chambreRepository.getById(idChambre);
-        Etudiant e = etudiantRepository.findEtudiantByCin(cinEtudiant);
-        int nbRes = (c.getReservations()).size();
-        if (c.getTypeC().equals("SIMPLE")&&(nbRes<1))
-        {
-            //String numRes = c.getNumeroChambre()+"-"+c.getBloc().getNomBloc()+"-"+cinEtudiant;
-            r.setIdReservation(c.getNumeroChambre()-cinEtudiant);
-            r.setEstValide(true);
-            c.getReservations().add(r);
-            e.getReservations().add(r);
-        }
-        else if (c.getTypeC().equals("DOUBLE")&&(nbRes<2))
-        {
-            r.setIdReservation(c.getNumeroChambre() - cinEtudiant);
-            r.setEstValide(true);
-            c.getReservations().add(r);
-            e.getReservations().add(r);
-        }
-        else if (c.getTypeC().equals("TRIPLE")&&(nbRes<3))
-        {
-            r.setIdReservation(c.getNumeroChambre() - cinEtudiant);
-            r.setEstValide(true);
-            c.getReservations().add(r);
-            e.getReservations().add(r);
-        }
-        chambreRepository.save(c);
-        etudiantRepository.save(e);
-        reservationRepository.save(r);
-        return r ;
+
     }
 }

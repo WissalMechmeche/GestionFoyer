@@ -52,11 +52,7 @@ public class ChambreRestController {
         return chambre;
     }
 
-    @PutMapping("/affecter-Chambre-A-Bloc/{numChambre}/{idBloc}")
-    public void affecterChambreABloc(@PathVariable("numChambre") List<Long> numChambre , @PathVariable("idBloc")
-    long idBloc) {
-        chambreService.affecterChambresABloc(numChambre, idBloc);
-    }
+
 
 
 }

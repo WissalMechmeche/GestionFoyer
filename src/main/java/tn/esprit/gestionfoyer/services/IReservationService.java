@@ -13,4 +13,5 @@ public interface IReservationService {
     public Reservation modifyReservation(Reservation reservation);
 
     public Reservation ajouterReservation (long idChambre, long cinEtudiant) ;
+
 }
